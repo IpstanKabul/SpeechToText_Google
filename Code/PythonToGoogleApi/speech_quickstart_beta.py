@@ -1,18 +1,21 @@
-from google.cloud import speech_v1p1beta1
-from google.cloud.speech_v1p1beta1 import enums
+import os
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="key.json"
+from google.cloud import speech_v1
+from google.cloud.speech_v1 import enums
+import io
 
 
-def sample_recognize(storage_uri):
+def sample_recognize(local_file_path):
     """
-    Performs synchronous speech recognition on an audio file
+    Transcribe a short audio file using synchronous speech recognition
 
     Args:
-      storage_uri URI for audio file in Cloud Storage, e.g. gs://[BUCKET]/[FILE]
+      local_file_path Path to local audio file, e.g. /path/audio.wav
     """
 
-    client = speech_v1p1beta1.SpeechClient()
+    client = speech_v1.SpeechClient()
 
-    # storage_uri = 'gs://cloud-samples-data/speech/brooklyn_bridge.mp3'
+    # local_file_path = 'resources/brooklyn_bridge.raw'
 
     # The language of the supplied audio
     language_code = "en-US"
@@ -28,10 +31,15 @@ def sample_recognize(storage_uri):
         "sample_rate_hertz": sample_rate_hertz,
         "encoding": encoding,
     }
-    audio = {"uri": storage_uri}
+    with io.open(local_file_path, "rb") as f:
+        content = f.read()
+    audio = {"content": content}
 
     response = client.recognize(config, audio)
     for result in response.results:
         # First alternative is the most probable result
         alternative = result.alternatives[0]
         print(u"Transcript: {}".format(alternative.transcript))
+
+mypath='D:\Documents\Sound recordings\Sample.flac'
+sample_recognize(mypath)

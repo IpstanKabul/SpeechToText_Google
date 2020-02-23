@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B9826DA7
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonToGoogleApi", "Code\PythonToGoogleApi\PythonToGoogleApi.pyproj", "{4CACABC2-E72A-47B7-BE00-EF52F5C01B4B}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonToGoogle2", "Code\PythonToGoogle2\PythonToGoogle2.pyproj", "{9FBC5579-2E8D-48B4-B63A-C227237ADBC4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,15 +19,12 @@ Global
 		{4CACABC2-E72A-47B7-BE00-EF52F5C01B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CACABC2-E72A-47B7-BE00-EF52F5C01B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CACABC2-E72A-47B7-BE00-EF52F5C01B4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FBC5579-2E8D-48B4-B63A-C227237ADBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FBC5579-2E8D-48B4-B63A-C227237ADBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4CACABC2-E72A-47B7-BE00-EF52F5C01B4B} = {CD8A98D0-D5C0-473C-A405-F121F6D9311D}
-		{9FBC5579-2E8D-48B4-B63A-C227237ADBC4} = {CD8A98D0-D5C0-473C-A405-F121F6D9311D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1CDF72D-5B96-45B5-8FFA-EB5E8F9FD143}
